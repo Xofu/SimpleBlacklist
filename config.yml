@@ -1,0 +1,18 @@
+#Kick screen being displayed when first being blacklisted
+#Use %punisher% to get the name of the player who issued the blacklist, use %reason% to get the reason of the blacklist.
+kick-message:
+  - '&cYou have been blacklisted by &6%punisher% &cfor'
+  - '&6%reason%'
+
+#Kick screen being displayed when you try joining the server while being blacklisted
+#Use %punisher% to get the name of the player who issued the blacklist, use %reason% to get the reason of the blacklist.
+join-message:
+  - '&cYou are blacklisted by &6%punisher% &cfor'
+  - '&6%reason%'
+
+#Messages
+NO_PERMISSION: '&cYou do not have permission to execute this command'
+COMMAND_USAGE: '&cUsage: /blacklist <player> <reason>'
+CANT_BLACKLIST_YOURSELF: '&cYou cannot blacklist yourself'
+ALREADY_BLACKLISTED: '&c%player% is already blacklisted'
+BLACKLISTED_PLAYER: '&c%player% has been blacklisted by %punisher% for %reason%'
