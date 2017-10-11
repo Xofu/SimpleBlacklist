@@ -21,10 +21,8 @@ public class FileManager {
     public FileManager(Blacklist instance) {
         this.instance = instance;
 
-        if(instance != null) {
-            blacklists = new File(instance.getDataFolder(), "blacklists.yml");
-            blacklistsConfig = YamlConfiguration.loadConfiguration(blacklists);
-        }
+        blacklists = new File(instance.getDataFolder(), "blacklists.yml");
+        blacklistsConfig = YamlConfiguration.loadConfiguration(blacklists);
     }
 
     public FileConfiguration getBlacklists() {
