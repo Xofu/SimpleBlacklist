@@ -33,7 +33,6 @@ public class PlayerListener implements Listener {
                     e.disallow(PlayerLoginEvent.Result.KICK_BANNED, kickMessage);
                 }
             }
-            System.out.println(e.getAddress().getHostName());
             return;
         }
 
