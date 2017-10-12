@@ -50,7 +50,7 @@ public class BlacklistCommand implements CommandExecutor {
                 instance.getFileManager().getBlacklists().set("UUID." + Bukkit.getPlayerExact(args[0]).getUniqueId().toString() + ".ip", Bukkit.getPlayerExact(args[0]).getAddress().getHostName());
                 instance.getFileManager().saveBlacklists();
 
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', instance.getConfig().getString("BLACKLISTED_PLAYER").replace("%player%", Bukkit.getPlayerExact(args[0]).getName()).replace("%punisher%", p.getName()).replace("%reason%", myString.replace(args[0], "").trim())));
+                Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', instance.getConfig().getString("BLACKLISTED_PLAYER").replace("%player%", Bukkit.getPlayerExact(args[0]).getName()).replace("%punisher%", p.getName()).replace("%reason%", myString.replace(args[0], "").trim())));
 
                 String kickMessage = "";
                 for(String s: instance.getConfig().getStringList("kick-message")) {
@@ -72,7 +72,7 @@ public class BlacklistCommand implements CommandExecutor {
                 instance.getFileManager().getBlacklists().set("UUID." + Bukkit.getOfflinePlayer(args[0]).getUniqueId().toString() + ".punisher", p.getName());
                 instance.getFileManager().getBlacklists().set("UUID." + Bukkit.getOfflinePlayer(args[0]).getUniqueId().toString() + ".ip", "waiting");
                 instance.getFileManager().saveBlacklists();
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', instance.getConfig().getString("BLACKLISTED_PLAYER").replace("%player%", Bukkit.getOfflinePlayer(args[0]).getName()).replace("%punisher%", p.getName()).replace("%reason%", myString.replace(args[0], "").trim())));
+                Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', instance.getConfig().getString("BLACKLISTED_PLAYER").replace("%player%", Bukkit.getOfflinePlayer(args[0]).getName()).replace("%punisher%", p.getName()).replace("%reason%", myString.replace(args[0], "").trim())));
                 return true;
             }
         }
