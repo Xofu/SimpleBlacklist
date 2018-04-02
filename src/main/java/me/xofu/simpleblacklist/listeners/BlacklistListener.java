@@ -41,6 +41,6 @@ public class BlacklistListener implements Listener {
         event.setCancelled(true);
 
         String message = String.join("\n", instance.getConfig().getStringList("CURRENTLY_BLACKLISTED"));
-        event.setCancelReason(new TextComponent(TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', message.replace("%punisher%", blacklist.getPunisher()).replace("%reason%", blacklist.getReason())))));
+        event.setCancelReason(ChatColor.translateAlternateColorCodes('&', message.replace("%punisher%", blacklist.getPunisher()).replace("%reason%", blacklist.getReason())));
     }
 }
