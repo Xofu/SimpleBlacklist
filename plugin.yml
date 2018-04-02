@@ -1,6 +1,0 @@
-main: me.xofu.blacklist.Blacklist
-name: SimpleBlacklist
-version: 1.0
-
-commands:
-  blacklist:
