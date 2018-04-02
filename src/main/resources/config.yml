@@ -1,0 +1,18 @@
+#Messages
+NO_PERMISSION: '&cYou do not have permission to execute this command'
+USAGE: '&cUsage: %usage%'
+NOT_A_PLAYER: '&cThe specified player does not exist. Please note this is case-sensitive.'
+ALREADY_BLACKLISTED: '&cThe specified player is already blacklisted'
+NOT_BLACKLISTED: '&cThe specified player is not blacklisted'
+PLAYER_BLACKLISTED: '&a%player% has been blacklisted by %punisher%'
+PLAYER_UNBLACKLISTED: '&a%player% has been unblacklisted by %punisher%'
+BLACKLISTED:
+- '&cYou have been blacklisted from the network'
+- '&cby &7%punisher%'
+- '&cfor'
+- '&c"&7%reason%&c"'
+CURRENTLY_BLACKLISTED:
+- '&cYou are currently blacklisted from the network'
+- '&cby &7%punisher%'
+- '&cfor'
+- '&c"&7%reason%&c"'
