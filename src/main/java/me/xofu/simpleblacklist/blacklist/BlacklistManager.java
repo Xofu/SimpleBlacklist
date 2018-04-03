@@ -86,7 +86,7 @@ public class BlacklistManager {
             UUID player = UUID.fromString(string);
             String punisher = blacklistsConfig.getString("Blacklist." + string + ".punisher");
             String reason = blacklistsConfig.getString("Blacklist." + string + ".reason");
-            String address = blacklistsConfig.contains("Blacklist." + string + ".address") ? blacklistsConfig.getString("Blacklist." + string + ".address") : null;
+            String address = blacklistsConfig.getString("Blacklist." + string + ".address") != null ? blacklistsConfig.getString("Blacklist." + string + ".address") : null;
 
             Blacklist blacklist = new Blacklist(player, punisher, reason);
             blacklist.setAddress(address);
@@ -96,8 +96,10 @@ public class BlacklistManager {
     }
 
     public void save() {
-
         List<String> blacklistList = new ArrayList<>();
+
+        blacklistsConfig.set("Blacklist", null);
+        blacklistsFile.save();
         for(Blacklist blacklist: getBlacklists()) {
             blacklistList.add(blacklist.getPlayer().toString());
 
